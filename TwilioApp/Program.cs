@@ -19,25 +19,21 @@ namespace TwilioApp
             //var message = twilio.SendMessage("+18017841260", "9132169521", "asdfsadfasdf", "");
             //Console.WriteLine(message.Sid);
             Console.WriteLine("Welcome to the text Daniel Application!");
-            Console.WriteLine("Enter [exit] at anytime to end the program.");
+            Console.WriteLine("Enter the message for the text.");
             string prompt = "--> ";
             Console.Write(prompt);
             string input = Console.ReadLine();
-            while (true)
+
+            Console.WriteLine("Enter the number of times you want to send the text.");
+            Console.Write(prompt);
+            int number = int.Parse(Console.ReadLine());
+            for (int i=0; i< number; i++)
             {
-                if (input != "exit")
-                {
-                    var message = twilio.SendMessage("+18017841260", "9132169521", input, "");
-                    //Console.WriteLine(message.Sid);
-                    Console.WriteLine("Enter another message");
-                    Console.Write(prompt);
-                    input = Console.ReadLine();
-                }
-                else
-                {
-                    break;
-                }
+                var message = twilio.SendMessage("+18017841260", "9132169521", input, "");
+                Console.WriteLine(i + 1 + " messages sent");
             }
+            Console.WriteLine("Press any key to exit . . .");
+            Console.ReadKey();
         }
     }
 }
