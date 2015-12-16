@@ -12,8 +12,8 @@ namespace TwilioApp
         static void Main(string[] args)
         {
             // Find your Account Sid and Auth Token at twilio.com/user/account 
-            string AccountSid = "AC85f12f79e35f3ea3f1fb985df2ee99a9";
-            string AuthToken = "ef3e7e352e393b144f8b74a2ed6c24af";
+            string AccountSid = "AC5528716f7e3eb23a55f0b602dc41a47e";
+            string AuthToken = "c42dd2fb8db6dcad7e429f7c4a04b5e6";
             var twilio = new TwilioRestClient(AccountSid, AuthToken);
 
             //var message = twilio.SendMessage("+18017841260", "9132169521", "asdfsadfasdf", "");
@@ -29,7 +29,7 @@ namespace TwilioApp
             int number = int.Parse(Console.ReadLine());
             for (int i=0; i< number; i++)
             {
-                var message = twilio.SendMessage("+18017841260", "9132169521", input, "");
+                var message = twilio.SendMessage("+19137035630", "9137082434", input, "");
                 Console.WriteLine(i + 1 + " messages sent");
             }
             Console.WriteLine("Press any key to exit . . .");
